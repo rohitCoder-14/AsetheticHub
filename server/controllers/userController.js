@@ -24,12 +24,19 @@ export const register = async (req, res) => {
       expiresIn: "7d",
     });
 
+    // res.cookie("token", token, {
+    //   httpOnly: true,
+    //   secure: process.env.NODE_ENV === "production",
+    //   sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
+    //   maxAge: 7 * 24 * 60 * 60 * 1000,
+    // });
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
+      secure: true, // This must be true if using SameSite: None
+      sameSite: "None",
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
+
     return res.json({
       success: true,
       user: { email: user.email, name: user.name },
@@ -68,12 +75,20 @@ export const login = async (req, res) => {
       expiresIn: "7d",
     });
 
+    // res.cookie("token", token, {
+    //   httpOnly: true,
+    //   secure: process.env.NODE_ENV === "production",
+    //   sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
+    //   maxAge: 7 * 24 * 60 * 60 * 1000,
+    // });
+
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
+      secure: true, // This must be true if using SameSite: None
+      sameSite: "None",
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
+
     return res.json({
       success: true,
       user: { email: user.email, name: user.name },
@@ -98,10 +113,15 @@ export const isAuth = async (req, res) => {
 // Logout User : /api/user/logout
 export const logout = async (req, res) => {
   try {
+    // res.clearCookie("token", {
+    //   httpOnly: true,
+    //   secure: process.env.NODE_ENV === "production",
+    //   sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
+    // });
     res.clearCookie("token", {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
+      secure: true, // Must be true if SameSite is "None"
+      sameSite: "None",
     });
     return res.json({ success: true, message: "Logged Out" });
   } catch (error) {
