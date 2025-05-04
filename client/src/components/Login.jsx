@@ -53,6 +53,7 @@ const Login = () => {
               placeholder="type here"
               className="border border-gray-200 rounded w-full p-2 mt-1 outline-primary"
               type="text"
+              name="name"
               required
             />
           </div>
@@ -65,6 +66,7 @@ const Login = () => {
             placeholder="type here"
             className="border border-gray-200 rounded w-full p-2 mt-1 outline-primary"
             type="email"
+            name="email"
             required
           />
         </div>
@@ -76,6 +78,7 @@ const Login = () => {
             placeholder="type here"
             className="border border-gray-200 rounded w-full p-2 mt-1 outline-primary"
             type="password"
+            name="password"
             required
           />
         </div>
