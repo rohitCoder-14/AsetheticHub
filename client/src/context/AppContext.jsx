@@ -18,26 +18,6 @@ export const AppContextProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState({});
   const [searchQuery, setSearchQuery] = useState({});
 
-  // New Update
-  useEffect(() => {
-    const checkAuth = async () => {
-      try {
-        const { data } = await axios.get("/api/user/is-auth", {
-          withCredentials: true,
-        });
-        if (data.success) {
-          setUser(data.user);
-        } else {
-          setUser(null);
-        }
-      } catch {
-        setUser(null);
-      }
-    };
-
-    checkAuth();
-  }, []);
-
   // Fetch Seller Status
   const fetchSeller = async () => {
     try {
