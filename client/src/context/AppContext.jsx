@@ -134,10 +134,10 @@ export const AppContextProvider = ({ children }) => {
     return Math.floor(totalAmount * 100) / 100;
   };
 
-  useEffect(() => {
-    fetchUser();
-    fetchSeller();
-    fetchProducts();
+  useEffect(async () => {
+    await fetchUser();
+    await fetchSeller();
+    await fetchProducts();
   }, []);
 
   // Update Database Cart Items
