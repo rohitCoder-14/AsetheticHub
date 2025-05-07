@@ -17,16 +17,9 @@ const Navbar = () => {
     axios,
   } = useAppContext();
 
-  // new changes
-  const [loading, setLoading] = React.useState(false);
-
   const logout = async () => {
-    setLoading(true);
     try {
-      const { data } = await axios.get("/api/user/logout", {
-        withCredentials: true, // ✅ Essential for cookie-based auth
-      });
-
+      const { data } = await axios.get("/api/user/logout");
       if (data.success) {
         toast.success(data.message);
         setUser(null);
@@ -36,44 +29,8 @@ const Navbar = () => {
       }
     } catch (error) {
       toast.error(error.message);
-    } finally {
-      setLoading(false);
     }
   };
-
-  // new changes
-  // const logout = async () => {
-  //   try {
-  //     const { data } = await axios.get("/api/user/logout", {
-  //       withCredentials: true, // ✅ This is essential for cookie-based auth
-  //     });
-
-  //     if (data.success) {
-  //       toast.success(data.message);
-  //       setUser(null);
-  //       navigate("/");
-  //     } else {
-  //       toast.error(data.message);
-  //     }
-  //   } catch (error) {
-  //     toast.error(error.message);
-  //   }
-  // };
-
-  // const logout = async () => {
-  //   try {
-  //     const { data } = await axios.get("/api/user/logout");
-  //     if (data.success) {
-  //       toast.success(data.message);
-  //       setUser(null);
-  //       navigate("/");
-  //     } else {
-  //       toast.error(data.message);
-  //     }
-  //   } catch (error) {
-  //     toast.error(error.message);
-  //   }
-  // };
 
   useEffect(() => {
     if (searchQuery.length > 0) {
