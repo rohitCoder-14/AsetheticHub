@@ -12,7 +12,8 @@ const authUser = async (req, res, next) => {
 
     if (tokenDecode.id) {
       // req.user = { id: tokenDecode.id };
-      req.user.id = { id: tokenDecode.id };
+      // req.user.id = { id: tokenDecode.id };
+      req.body.userId = tokenDecode.id;
       next();
     } else {
       return res.json({ success: false, message: "Not Authorized" });
