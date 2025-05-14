@@ -21,16 +21,12 @@ const Navbar = () => {
     try {
       // const { data } = await axios.get("/api/user/logout");
       const { data } = await axios.get("/api/user/logout", {
-        withCredentials: true, // 🔥 REQUIRED for cookie auth
+        withCredentials: true,
       });
 
       if (data.success) {
         toast.success(data.message);
-        console.log("before");
-        console.log(user);
         setUser(null);
-        console.log("after");
-        console.log(user);
         navigate("/");
       } else {
         toast.error(data.message);
