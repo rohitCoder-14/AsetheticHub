@@ -24,19 +24,12 @@ export const register = async (req, res) => {
       expiresIn: "7d",
     });
 
-    // res.cookie("token", token, {
-    //   httpOnly: true,
-    //   secure: process.env.NODE_ENV === "production",
-    //   sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
-    //   maxAge: 7 * 24 * 60 * 60 * 1000,
-    // });
     res.cookie("token", token, {
       httpOnly: true,
-      secure: true, // Vercel uses HTTPS
-      sameSite: "none", // Must be "none" for cross-site cookies
+      secure: process.env.NODE_ENV === "production",
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
-
     return res.json({
       success: true,
       user: { email: user.email, name: user.name },
@@ -75,19 +68,12 @@ export const login = async (req, res) => {
       expiresIn: "7d",
     });
 
-    // res.cookie("token", token, {
-    //   httpOnly: true,
-    //   secure: process.env.NODE_ENV === "production",
-    //   sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
-    //   maxAge: 7 * 24 * 60 * 60 * 1000,
-    // });
     res.cookie("token", token, {
       httpOnly: true,
-      secure: true, // Vercel uses HTTPS
-      sameSite: "none", // Must be "none" for cross-site cookies
+      secure: process.env.NODE_ENV === "production",
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
-
     return res.json({
       success: true,
       user: { email: user.email, name: user.name },
@@ -113,20 +99,11 @@ export const isAuth = async (req, res) => {
 // Logout User : /api/user/logout
 export const logout = async (req, res) => {
   try {
-    // res.clearCookie("token", {
-    //   httpOnly: true,
-    //   secure: process.env.NODE_ENV === "production",
-    //   sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
-    // });
-    console.log("Cookies before clearing:", req.cookies);
     res.clearCookie("token", {
       httpOnly: true,
-      secure: true,
-      sameSite: "none",
-      path: "/", // Optional if you set it
+      secure: process.env.NODE_ENV === "production",
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
     });
-
-    console.log("Cookies after clearing:", req.cookies);
     return res.json({ success: true, message: "Logged Out" });
   } catch (error) {
     console.log(error.message);
