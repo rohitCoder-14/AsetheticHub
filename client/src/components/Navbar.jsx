@@ -26,7 +26,11 @@ const Navbar = () => {
 
       if (data.success) {
         toast.success(data.message);
+        console.log("before");
+        console.log(user);
         setUser(null);
+        console.log("after");
+        console.log(user);
         navigate("/");
       } else {
         toast.error(data.message);
