@@ -11,21 +11,21 @@ The website replicates the core functionality of a modern online fashion store, 
 
 Key Features:
 
-  Product Catalog: Displays a wide variety of fashion products such as clothing, sneakers, and accessories.
+1.  Product Catalog: Displays a wide variety of fashion products such as clothing, sneakers, and accessories.
 
-  Cart & Checkout System: Add, update, or remove items from the cart with real-time price calculation.
+2.  Cart & Checkout System: Add, update, or remove items from the cart with real-time price calculation.
 
-  Secure Payments: Integrated Stripe Payment Gateway for safe and reliable transactions.
+3.  Secure Payments: Integrated Stripe Payment Gateway for safe and reliable transactions.
 
-  Smart Search & Filters: Search products by name, category, or price range for a better shopping experience.
+4.  Smart Search & Filters: Search products by name, category, or price range for a better shopping experience.
 
-  User Authentication: Secure registration and login with JWT-based authentication.
+5.  User Authentication: Secure registration and login with JWT-based authentication.
 
-  Admin Dashboard: Manage products, categories, and customer orders efficiently.
+6.  Admin Dashboard: Manage products, categories, and customer orders efficiently.
 
-  Responsive UI: Fully optimized design for desktop, tablet, and mobile devices.
+7.  Responsive UI: Fully optimized design for desktop, tablet, and mobile devices.
 
-  Order Management: Complete order flow from product selection to checkout confirmation.
+8.  Order Management: Complete order flow from product selection to checkout confirmation.
 
 
 
@@ -33,23 +33,24 @@ Key Features:
 
 Technologies Used:
 
-Frontend: React.js, HTML5, CSS3, JavaScript
+- Frontend: React.js, HTML5, CSS3, JavaScript
 
-Backend: Node.js, Express.js
+- Backend: Node.js, Express.js
 
-Database: MongoDB (Mongoose for schema modeling)
+- Database: MongoDB (Mongoose for schema modeling)
 
-Authentication: JSON Web Tokens (JWT) & bcrypt.js
+- Authentication: JSON Web Tokens (JWT) & bcrypt.js
 
-Payment Gateway: Stripe API
+- Payment Gateway: Stripe API
 
-State Management: React Hooks / Context API
+- State Management: React Hooks / Context API
 
-Styling: Tailwind CSS / Bootstrap (depending on design preference)
+- Styling: Tailwind CSS / Bootstrap (depending on design preference)
 
 
 
 Project Objectives:
 To design and develop a modern full-stack fashion e-commerce platform using the MERN Stack that offers secure, fast, and engaging online shopping experiences.
 The objective of this project is to demonstrate practical implementation of end-to-end e-commerce functionality — including user authentication, product management, Stripe payment integration, and dynamic UI design — while showcasing strong skills in frontend development, backend architecture, and API integration.
+
 
