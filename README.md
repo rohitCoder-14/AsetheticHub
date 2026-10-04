@@ -341,5 +341,268 @@ AestheticHub/
 ├── 📁 client/
 │   ├── 📁 src/
 │   │   ├── 📁 components/
-│   │   ├──
+│   │   ├── 📁 pages/
+│   │   ├── 📁 context/
+│   │   ├── 📁 hooks/
+│   │   ├── 📁 services/
+│   │   └── 📄 App.jsx
+│   │
+│   └── 📄 package.json
+│
+├── 📁 server/
+│   ├── 📁 controllers/
+│   ├── 📁 models/
+│   ├── 📁 routes/
+│   ├── 📁 middleware/
+│   ├── 📁 config/
+│   ├── 📄 server.js
+│   └── 📄 package.json
+│
+├── 📄 README.md
+└── 📄 .gitignore
 ```
+
+> 💡 Adjust the folder names above according to your actual repository structure.
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/rohitCoder-14/AestheticHub.git
+cd AestheticHub
+```
+
+### 2️⃣ Install Frontend Dependencies
+
+```bash
+cd client
+npm install
+```
+
+### 3️⃣ Install Backend Dependencies
+
+```bash
+cd ../server
+npm install
+```
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env` file inside the backend directory.
+
+```env
+MONGO_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_jwt_secret
+
+STRIPE_SECRET_KEY=your_stripe_secret_key
+
+PORT=5000
+```
+
+For the frontend, configure the required API URL and Stripe-related public configuration according to your implementation.
+
+> ⚠️ **Never commit `.env` files or secret API keys to GitHub.**
+
+---
+
+## ▶️ Run the Application
+
+### Start Backend
+
+```bash
+cd server
+npm run dev
+```
+
+### Start Frontend
+
+Open another terminal:
+
+```bash
+cd client
+npm start
+```
+
+The application should then be available through the configured local frontend URL.
+
+---
+
+## 💳 Stripe Payment Flow
+
+AestheticHub uses Stripe to handle online payments.
+
+```text
+        🛒 Cart
+          │
+          ▼
+      📋 Checkout
+          │
+          ▼
+   💳 Stripe Checkout
+          │
+          ▼
+   🔐 Secure Payment
+          │
+          ▼
+    ✅ Confirmation
+          │
+          ▼
+    📦 Create Order
+```
+
+The integration separates payment processing from the application's core business logic while providing a secure checkout experience.
+
+---
+
+## 🔒 Security
+
+Security is an important part of the application.
+
+Implemented security concepts include:
+
+* 🔐 JWT-based authentication
+* 🔒 Password hashing with bcrypt.js
+* 🛡️ Protected API routes
+* 🔑 Environment-based secret management
+* 💳 Secure payment processing through Stripe
+* 🚫 Sensitive credentials excluded from source control
+
+---
+
+## 📸 Screenshots
+
+Add screenshots of the application here to make the repository more attractive:
+
+### 🏠 Home Page
+
+> Add your homepage screenshot here.
+
+### 🛍️ Product Catalog
+
+> Add product listing screenshot here.
+
+### 🛒 Shopping Cart
+
+> Add cart screenshot here.
+
+### 💳 Checkout
+
+> Add Stripe checkout screenshot here.
+
+### 👨‍💼 Admin Dashboard
+
+> Add admin dashboard screenshot here.
+
+---
+
+## 📊 Project Highlights
+
+| Feature             | Implementation             |
+| ------------------- | -------------------------- |
+| 🛍️ Product Catalog | React + MongoDB            |
+| 🛒 Shopping Cart    | React Hooks / Context API  |
+| 🔐 Authentication   | JWT + bcrypt.js            |
+| 💳 Payments         | Stripe API                 |
+| 🔎 Search & Filters | React + Backend APIs       |
+| 👨‍💼 Admin Panel   | React + Express            |
+| 🗄️ Database        | MongoDB + Mongoose         |
+| 📦 Orders           | Express + MongoDB          |
+| 📱 Responsive UI    | CSS / Tailwind / Bootstrap |
+
+---
+
+## 🌟 Why AestheticHub?
+
+AestheticHub demonstrates how different technologies can be combined to build a complete production-style e-commerce application.
+
+The project covers the complete development cycle:
+
+```text
+🎨 Frontend Development
+        +
+⚙️ Backend Development
+        +
+🗄️ Database Management
+        +
+🔐 Authentication
+        +
+💳 Payment Integration
+        +
+📦 Order Processing
+        ↓
+🚀 Full-Stack E-Commerce Platform
+```
+
+---
+
+## 🎓 Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+* ⚛️ Building dynamic React applications
+* 🟢 Developing REST APIs using Node.js and Express
+* 🍃 Working with MongoDB and Mongoose
+* 🔐 Implementing JWT authentication
+* 🔒 Password hashing using bcrypt.js
+* 💳 Integrating Stripe payments
+* 🛒 Building shopping cart functionality
+* 📦 Managing e-commerce orders
+* 🔎 Implementing search and filtering
+* 📱 Designing responsive interfaces
+* 🔗 Connecting frontend and backend systems
+
+---
+
+## 🔮 Future Improvements
+
+Potential future enhancements include:
+
+* 🤖 AI-powered product recommendations
+* ❤️ Wishlist functionality
+* ⭐ Product ratings and reviews
+* 📧 Email order notifications
+* 📊 Advanced admin analytics
+* 🎁 Discount and coupon system
+* 📦 Real-time order tracking
+* 🌐 Multi-language support
+* 💳 Additional payment methods
+* 🔔 Real-time notifications
+
+---
+
+## 👨‍💻 Author
+
+### Rohit Singh Rawat
+
+🎓 **MCA — Data Science**
+
+<p>
+  <a href="https://github.com/rohitCoder-14">
+    <img src="https://img.shields.io/badge/GitHub-rohitCoder--14-181717?style=for-the-badge&logo=github" alt="GitHub"/>
+  </a>
+  <a href="https://www.linkedin.com/in/rohit-singh-rawat1407/">
+    <img src="https://img.shields.io/badge/LinkedIn-Rohit%20Singh%20Rawat-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+</p>
+
+---
+
+## 📄 License
+
+This project is intended for **educational and portfolio purposes**.
+
+If you plan to publish the project with a specific open-source license, add the corresponding `LICENSE` file to the repository.
+
+---
+
+<p align="center">
+  🛍️ <b>AestheticHub</b> — Fashion Meets Technology
+  <br/>
+  <sub>Built with ❤️ using the MERN Stack</sub>
+</p>
