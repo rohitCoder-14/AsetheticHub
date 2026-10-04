@@ -408,32 +408,6 @@ Implemented security concepts include:
 
 ---
 
-## 📸 Screenshots
-
-Add screenshots of the application here to make the repository more attractive:
-
-### 🏠 Home Page
-
-> Add your homepage screenshot here.
-
-### 🛍️ Product Catalog
-
-> Add product listing screenshot here.
-
-### 🛒 Shopping Cart
-
-> Add cart screenshot here.
-
-### 💳 Checkout
-
-> Add Stripe checkout screenshot here.
-
-### 👨‍💼 Admin Dashboard
-
-> Add admin dashboard screenshot here.
-
----
-
 ## 📊 Project Highlights
 
 | Feature             | Implementation             |
